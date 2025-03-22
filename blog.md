@@ -16,6 +16,13 @@ Welcome to my blog! Here you will find my latest posts.
 </ul>
 
 ## Recent Posts
+<ul id="post-list">
 {% for post in site.posts %}
-- [{{ post.title }}]({{ post.url }}) - {{ post.date | date: "%B %d, %Y" }}
+    <li>
+        <a href="{{ post.url }}" class="post-title">{{ post.title }}</a> - {{ post.date | date: "%B %d, %Y" }}
+        <p class="post-content" style="display:none;">{{ post.content | strip_html }}</p>
+    </li>
 {% endfor %}
+</ul>
+
+<script src="/assets/js/search.js"></script>
