@@ -5,4 +5,13 @@ permalink: /about/
 ---
 
 # About Me
-This is the about page for my Jekyll-powered website.
+
+Welcome to my about page! Here, I share information about myself and this website.
+
+## Why This Site?
+
+- To showcase my work  
+- To share knowledge and ideas  
+- To experiment with Jekyll and GitHub Pages  
+
+Stay tuned for more updates!
