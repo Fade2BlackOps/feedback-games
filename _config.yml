@@ -9,5 +9,7 @@ header_pages:
 - about.md
 - blog.md
 
+permalink:     /feedback-games/blog/:title/
+
 sass:
   style:        compressed
