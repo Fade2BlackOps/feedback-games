@@ -2,3 +2,9 @@ title:        My Jekyll Website
 description:  A simple website powered by Jekyll
 theme:        minima  # You can change this later
 show_excerpts:  true  # Optional: Shows post excerpts of full posts
+
+# Navigation Links
+header_pages:
+- index.html
+- about.html
+- blog.html
