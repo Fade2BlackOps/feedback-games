@@ -5,6 +5,6 @@ show_excerpts:  true  # Optional: Shows post excerpts of full posts
 
 # Navigation Links
 header_pages:
-- index.html
+- index.md
 - about.html
 - blog.html
