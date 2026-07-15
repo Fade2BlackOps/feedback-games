@@ -4,3 +4,5 @@ gem "github-pages", group: :jekyll_plugins
 
 gem "csv"
 gem "bigdecimal"
+gem "base64"
+gem "logger"
