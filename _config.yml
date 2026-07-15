@@ -1,13 +1,14 @@
-title:          My Jekyll Website
-description:    A simple website powered by Jekyll
-theme:          minima  # You can change this later
-show_excerpts:  true  # Optional: Shows post excerpts of full posts
+title: Riftline Games
+description: Independent games. Uncompromising worlds.
+url: ""
+baseurl: "" # Use "/repository-name" for a GitHub project site; leave blank for a custom domain or username.github.io repo.
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+timezone: America/New_York
 
-# Navigation Links
-header_pages:
-- index.md
-- about.md
-- blog.md
-
-sass:
-  style:        compressed
+# Files that should not be copied into the generated site.
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

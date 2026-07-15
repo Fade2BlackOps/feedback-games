@@ -1,0 +1,43 @@
+---
+layout: null
+title: Categories
+---
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Blog Categories | {{ site.title }}</title>
+        <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+    </head>
+    <body>
+        {% include header.html %}
+        <main id="main">
+            <section class="page-hero">
+                <div class="shell">
+                    <div class="eyebrow">Archive</div>
+                    <h1>Categories<span class="slash">.</span></h1>
+                    <p>Browse studio posts by subject.</p>
+                </div>
+            </section>
+            <section class="section">
+                <div class="shell category-list">
+                    {% assign sorted_categories = site.categories | sort %}
+                    {% for category in sorted_categories %}
+                    {% assign category_name = category[0] %}
+                    {% assign category_posts = category[1] %}
+                    <section id="{{ category_name | slugify }}" class="category-group">
+                        <h2>{{ category_name }}</h2>
+                        <ul>
+                            {% for post in category_posts %}
+                            <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+                    {% endfor %}
+                </div>
+            </section>
+        </main>
+        {% include footer.html %}
+    </body>
+</html>

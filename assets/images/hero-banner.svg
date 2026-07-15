@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#202b3b"/><stop offset=".55" stop-color="#11151d"/><stop offset="1" stop-color="#050608"/></linearGradient>
+    <radialGradient id="r"><stop stop-color="#ff4d2e" stop-opacity=".8"/><stop offset="1" stop-color="#ff4d2e" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <circle cx="1240" cy="380" r="380" fill="url(#r)" opacity=".35"/>
+  <path d="M950 780 1190 180h220l-210 600z" fill="#0b0d11" stroke="#697488" stroke-width="3"/>
+  <path d="m1090 660 180-400 100 0-170 400z" fill="#ff4d2e" opacity=".78"/>
+  <path d="M850 780 1120 100M1000 810l310-670M1200 830l250-550" stroke="#d9e0ea" stroke-opacity=".18" stroke-width="4"/>
+  <g fill="#e5ebf2" opacity=".12"><path d="M1300 140h180l-40 30h-180z"/><path d="M1240 210h260l-30 22h-260z"/><path d="M1350 700h170l-40 28h-170z"/></g>
+  <text x="1180" y="835" fill="#fff" opacity=".22" font-family="Arial" font-size="28" letter-spacing="12">REPLACE WITH KEY ART</text>
+</svg>
