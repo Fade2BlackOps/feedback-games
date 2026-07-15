@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Project Helix | Riftline Games</title>
+        <title>Projects | Riftline Games</title>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
@@ -26,24 +26,51 @@
         <main id="main">
             <section class="page-hero">
                 <div class="shell">
-                    <div class="eyebrow">In development · PC / Console</div>
-                    <h1>Project Helix<span class="slash">.</span></h1>
-                    <p>A placeholder detail page for one game, ready for a trailer embed, screenshots, feature list, platform links, and press information.</p>
-                    <div class="actions"><a class="button" href="#">Wishlist on Steam</a><a class="button ghost" href="#">Watch trailer</a></div>
+                    <div class="eyebrow">Our work</div>
+                    <h1>Projects<span class="slash">//</span></h1>
+                    <p>Original games, experiments, and prototypes. Use these cards as your project index and connect each one to a dedicated detail page.</p>
                 </div>
             </section>
             <section class="section">
                 <div class="shell">
-                    <img class="angle-image" src="assets/images/project-1.svg" alt="Project Helix placeholder key art">
-                    <div class="split" style="margin-top:4rem;align-items:start">
-                        <div>
-                            <div class="eyebrow">The game</div>
-                            <h2>Momentum is the weapon.</h2>
-                        </div>
-                        <div class="prose">
-                            <p>Project Helix is a fast third-person action game where movement, positioning, and aggression feed one another. Chain traversal into attacks, redirect enemy force, and turn collapsing spaces into opportunities.</p>
-                            <p>This copy is intentionally generic. Replace it with the actual pitch, development status, release window, platforms, and links for your game.</p>
-                        </div>
+                    <div class="filter-row" aria-label="Project filters"><button class="filter-button active" data-filter="all">All</button><button class="filter-button" data-filter="current">Current</button><button class="filter-button" data-filter="prototype">Prototypes</button><button class="filter-button" data-filter="released">Released</button></div>
+                    <div class="projects-grid">
+                        <article class="project-card reveal" data-category="current">
+                            <img src="assets/images/project-1.svg" alt="Project Helix placeholder">
+                            <div class="project-overlay">
+                                <span class="project-tag">Current · Action</span>
+                                <h3>Project Helix</h3>
+                                <p>Momentum-driven combat in a fractured megastructure.</p>
+                            </div>
+                            <a class="project-link" href="project-detail.html" aria-label="View Project Helix"></a>
+                        </article>
+                        <article class="project-card reveal" data-category="prototype">
+                            <img src="assets/images/project-2.svg" alt="Dead Signal placeholder">
+                            <div class="project-overlay">
+                                <span class="project-tag">Prototype · Horror</span>
+                                <h3>Dead Signal</h3>
+                                <p>Analog dread, environmental puzzles, and one impossible broadcast.</p>
+                            </div>
+                            <a class="project-link" href="project-detail.html" aria-label="View Dead Signal"></a>
+                        </article>
+                        <article class="project-card reveal" data-category="released">
+                            <img src="assets/images/project-3.svg" alt="Zero Hour placeholder">
+                            <div class="project-overlay">
+                                <span class="project-tag">Released · Arcade</span>
+                                <h3>Zero Hour</h3>
+                                <p>A compact score-attack experiment about precision under pressure.</p>
+                            </div>
+                            <a class="project-link" href="project-detail.html" aria-label="View Zero Hour"></a>
+                        </article>
+                        <article class="project-card reveal" data-category="prototype">
+                            <img src="assets/images/project-4.svg" alt="Blacksite placeholder">
+                            <div class="project-overlay">
+                                <span class="project-tag">Prototype · Strategy</span>
+                                <h3>Blacksite</h3>
+                                <p>Plan the breach. Read the room. Adapt when the plan collapses.</p>
+                            </div>
+                            <a class="project-link" href="project-detail.html" aria-label="View Blacksite"></a>
+                        </article>
                     </div>
                 </div>
             </section>

@@ -17,11 +17,11 @@ Replace the SVG files in `assets/images/` while keeping the same filenames, or u
 ## Contact form
 The form is a visual demo. Connect it to Formspree, Netlify Forms, Basin, or your own backend.
 
-## Pages
-- `index.html`
-- `projects.html`
-- `project-detail.html`
-- `about.html`
-- `blog.html`
-- `blog-post.html`
-- `contact.html`
+## Important files
+- `_posts/` — Markdown blog posts
+- `_layouts/post.html` — shared design for every post
+- `_includes/header.html` and `_includes/footer.html` — shared post/blog navigation
+- `blog.html` — automatically lists all Markdown posts
+- `categories.html` — automatically groups posts by category
+- `_config.yml` — Jekyll settings
+- `BLOG_WORKFLOW.md` — publishing instructions

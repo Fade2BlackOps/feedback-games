@@ -1,28 +1,18 @@
+---
+layout: null
+title: Blog
+---
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Blog | Riftline Games</title>
-        <link rel="stylesheet" href="styles.css">
+        <meta name="description" content="Production notes, design breakdowns, studio updates, and lessons from Riftline Games.">
+        <title>Blog | {{ site.title }}</title>
+        <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
     </head>
     <body>
-        <a class="skip-link" href="#main">Skip to content</a>
-        <header class="site-header">
-            <div class="nav-wrap">
-                <a class="logo" href="index.html">Riftline<span>//</span>Games</a>
-                <button class="menu-toggle" aria-expanded="false" aria-label="Open navigation">☰</button>
-                <nav class="site-nav" aria-label="Main navigation">
-                    <ul>
-                        <li><a href="index.html" >Home</a></li>
-                        <li><a href="projects.html" >Projects</a></li>
-                        <li><a href="about.html" >About</a></li>
-                        <li><a href="blog.html" class="active">Blog</a></li>
-                        <li><a href="contact.html" >Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        {% include header.html %}
         <main id="main">
             <section class="page-hero">
                 <div class="shell">
@@ -33,53 +23,28 @@
             </section>
             <section class="section">
                 <div class="shell">
+                    {% if site.posts.size > 0 %}
                     <div class="posts-grid">
+                        {% for post in site.posts %}
                         <article class="post-card reveal">
-                            <span class="post-meta">Design · July 2, 2026</span>
-                            <h3><a href="blog-post.html">Making speed readable</a></h3>
-                            <p>How camera language, animation, and level geometry communicate momentum.</p>
+                            <span class="post-meta">
+                            {% if post.categories and post.categories.size > 0 %}{{ post.categories | first }} · {% endif %}{{ post.date | date: "%B %-d, %Y" }}
+                            </span>
+                            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                            <p>{{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 150 }}</p>
+                            <a class="text-link" href="{{ post.url | relative_url }}">Read post →</a>
                         </article>
-                        <article class="post-card reveal">
-                            <span class="post-meta">Studio · June 18, 2026</span>
-                            <h3><a href="blog-post.html">Why we prototype ugly</a></h3>
-                            <p>Pretty assets can hide weak ideas. Early builds should expose them.</p>
-                        </article>
-                        <article class="post-card reveal">
-                            <span class="post-meta">Audio · May 29, 2026</span>
-                            <h3><a href="blog-post.html">Sound as player feedback</a></h3>
-                            <p>Building a combat mix that communicates state before the HUD does.</p>
-                        </article>
-                        <article class="post-card reveal">
-                            <span class="post-meta">Art · May 10, 2026</span>
-                            <h3><a href="blog-post.html">Finding a visual language</a></h3>
-                            <p>How shape, contrast, and controlled color create a coherent world.</p>
-                        </article>
-                        <article class="post-card reveal">
-                            <span class="post-meta">Production · April 22, 2026</span>
-                            <h3><a href="blog-post.html">Scoping the first vertical slice</a></h3>
-                            <p>A practical way to define the smallest build that proves the full experience.</p>
-                        </article>
-                        <article class="post-card reveal">
-                            <span class="post-meta">Community · April 4, 2026</span>
-                            <h3><a href="blog-post.html">Playtest notes: what surprised us</a></h3>
-                            <p>The most useful feedback was not about difficulty. It was about confidence.</p>
-                        </article>
+                        {% endfor %}
                     </div>
+                    {% else %}
+                    <div class="empty-state">
+                        <h2>No transmissions yet<span class="slash">.</span></h2>
+                        <p>Add a Markdown file to <code>_posts</code> and Jekyll will place it here automatically.</p>
+                    </div>
+                    {% endif %}
                 </div>
             </section>
         </main>
-        <footer class="site-footer">
-            <div class="shell footer-grid">
-                <div>
-                    <a class="logo" href="index.html">Riftline<span>//</span>Games</a>
-                    <p>Independent games. Uncompromising worlds.</p>
-                </div>
-                <div>
-                    <div class="socials"><a href="#">YouTube</a><a href="#">Discord</a><a href="#">Bluesky</a><a href="#">Steam</a></div>
-                    <p>© 2026 Riftline Games. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
-        <script src="script.js"></script>
+        {% include footer.html %}
     </body>
 </html>
