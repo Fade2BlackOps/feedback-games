@@ -1,51 +1,62 @@
+---
+nav_section: blog
+---
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+            >
         <title>{{ page.title }} | {{ site.title }}</title>
-        <link 
-            rel="stylesheet" 
+        {% if page.description %}
+        <meta
+            name="description"
+            content="{{ page.description | escape }}"
+            >
+        {% endif %}
+        <link
+            rel="stylesheet"
             href="{{ '/styles.css' | relative_url }}"
-        >
+            >
     </head>
     <body>
         {% include header.html %}
         <main id="main">
-            <section class="page-hero blog-hero">
+            <section class="page-hero">
                 <div class="shell">
                     <div class="eyebrow">
-                        {% if page.categories and page.categories.size > 0 %}{{ page.categories | first }} · {% endif %}{{ page.date | date: "%B %-d, %Y" }}
+                        {% if page.categories %}
+                        {{ page.categories | join: " · " }}
+                        ·
+                        {% endif %}
+                        {{ page.date | date: "%B %-d, %Y" }}
                     </div>
-                    <h1>{{ page.title }}<span class="slash">.</span></h1>
+                    <h1>
+                        {{ page.title }}<span class="slash">.</span>
+                    </h1>
                     {% if page.description %}
                     <p>{{ page.description }}</p>
                     {% endif %}
                 </div>
             </section>
             <article class="section">
-                <div class="shell article markdown-body">
-                    {% if page.author %}
-                    <p class="post-byline">By {{ page.author }}</p>
-                    {% endif %}
+                <div class="shell article">
                     {{ content }}
-                    {% if page.categories or page.tags %}
+                    {% if page.tags %}
                     <footer class="post-taxonomy">
-                        {% if page.categories %}
-                        <p><strong>Categories:</strong>
-                            {% for category in page.categories %}
-                            <a href="{{ '/blog/categories/' | relative_url }}#{{ category | slugify }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
-                            {% endfor %}
-                        </p>
-                        {% endif %}
-                        {% if page.tags %}
-                        <p><strong>Tags:</strong>
-                            {% for tag in page.tags %}<span class="tag">#{{ tag }}</span>{% unless forloop.last %} {% endunless %}{% endfor %}
-                        </p>
-                        {% endif %}
+                        <strong>Tags:</strong>
+                        {% for tag in page.tags %}
+                        <span class="post-tag">#{{ tag }}</span>
+                        {% endfor %}
                     </footer>
                     {% endif %}
+                    <p class="post-return">
+                        <a href="{{ '/blog/' | relative_url }}">
+                        ← Return to all posts
+                        </a>
+                    </p>
                 </div>
             </article>
         </main>

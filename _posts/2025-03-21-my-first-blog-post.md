@@ -1,8 +1,8 @@
 ---
-layout: post
 title: "My First Blog Post"
 date: 2025-03-21
-author: Your Name
+author: "Your Name"
+description: "Put description of post here"
 categories: [General]
 tags: [jekyll, blogging, github-pages]
 ---
