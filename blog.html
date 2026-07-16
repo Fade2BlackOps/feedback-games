@@ -31,14 +31,47 @@ nav_section: blog
                     {% if site.posts.size > 0 %}
                     <div class="posts-grid">
                         {% for post in site.posts %}
-                        <article class="post-card reveal">
-                            <span class="post-meta">
-                            {% if post.categories and post.categories.size > 0 %}{{ post.categories | first }} · {% endif %}{{ post.date | date: "%B %-d, %Y" }}
-                            </span>
-                            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                            <p>{{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 150 }}</p>
-                            <a class="text-link" href="{{ post.url | relative_url }}">Read post →</a>
-                        </article>
+
+                            <article class="blog-card">
+
+                                {% if post.image %}
+                                <img
+                                    src="{{ post.image | relative_url }}"
+                                    alt="{{ post.image_alt | default: post.title | escape }}"
+                                >
+                                {% endif %}
+
+                                <div class="blog-card-content">
+
+                                <div class="eyebrow">
+                                    {{ post.date | date: "%B %-d, %Y" }}
+                                </div>
+
+                                <h2>
+                                    <a href="{{ post.url | relative_url }}">
+                                    {{ post.title }}
+                                    </a>
+                                </h2>
+
+                                {% if post.description %}
+                                    <p>{{ post.description }}</p>
+                                {% else %}
+                                    <p>
+                                    {{ post.excerpt | strip_html | truncatewords: 28 }}
+                                    </p>
+                                {% endif %}
+
+                                <a
+                                    class="text-link"
+                                    href="{{ post.url | relative_url }}"
+                                >
+                                    Read article →
+                                </a>
+
+                                </div>
+
+                            </article>
+
                         {% endfor %}
                     </div>
                     {% else %}
