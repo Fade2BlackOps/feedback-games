@@ -1,15 +1,64 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
     <div class="nav-wrap">
-        <a class="logo" href="{{ '/' | relative_url }}">Riftline<span>//</span>Games</a>
-        <button class="menu-toggle" aria-expanded="false" aria-label="Open navigation">☰</button>
-        <nav class="site-nav" aria-label="Main navigation">
+        <a class="logo" href="{{ '/' | relative_url }}">
+        Feedback<span>//</span>Games
+        </a>
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="main-navigation"
+            aria-label="Open navigation"
+            >
+        ☰
+        </button>
+        <nav
+            id="main-navigation"
+            class="site-nav"
+            aria-label="Main navigation"
+            >
             <ul>
-                <li><a href="{{ '/' | relative_url }}">Home</a></li>
-                <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
-                <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-                <li><a href="{{ '/blog/' | relative_url }}" class="active">Blog</a></li>
-                <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+                <li>
+                    <a
+                    href="{{ '/' | relative_url }}"
+                    {% if page.nav_section == "home" %}class="active" aria-current="page"{% endif %}
+                    >
+                    Home
+                    </a>
+                </li>
+                <li>
+                    <a
+                    href="{{ '/projects/' | relative_url }}"
+                    {% if page.nav_section == "projects" %}class="active" aria-current="page"{% endif %}
+                    >
+                    Projects
+                    </a>
+                </li>
+                <li>
+                    <a
+                    href="{{ '/about/' | relative_url }}"
+                    {% if page.nav_section == "about" %}class="active" aria-current="page"{% endif %}
+                    >
+                    About
+                    </a>
+                </li>
+                <li>
+                    <a
+                    href="{{ '/blog/' | relative_url }}"
+                    {% if page.nav_section == "blog" %}class="active" aria-current="page"{% endif %}
+                    >
+                    Blog
+                    </a>
+                </li>
+                <li>
+                    <a
+                    href="{{ '/contact/' | relative_url }}"
+                    {% if page.nav_section == "contact" %}class="active" aria-current="page"{% endif %}
+                    >
+                    Contact
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
