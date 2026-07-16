@@ -1,17 +1,13 @@
 title: Feedback Games
 description: Independent games. Uncompromising worlds.
-url: ""
+url: "https://feedbackgames.com" # the base hostname & protocol for your site
 baseurl: "" # Use "/repository-name" for a GitHub project site; leave blank for a custom domain or username.github.io repo.
-markdown: kramdown
-permalink: /blog/:year/:month/:day/:title/
-timezone: America/New_York
 
-# Files that should not be copied into the generated site.
-exclude:
-  - README.md
-  - Gemfile
-  - Gemfile.lock
-  - vendor
+permalink: /blog/:title/
+
+markdown: kramdown
+
+timezone: America/New_York
 
 defaults:
   - scope:
@@ -20,3 +16,11 @@ defaults:
     values:
       layout: post
       nav_section: blog
+
+# Files that should not be copied into the generated site.
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
