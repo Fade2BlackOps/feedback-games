@@ -1,10 +1,21 @@
-title: Riftline Games
+title: Feedback Games
 description: Independent games. Uncompromising worlds.
-url: ""
+url: "https://feedbackgames.net" # the base hostname & protocol for the site
 baseurl: "" # Use "/repository-name" for a GitHub project site; leave blank for a custom domain or username.github.io repo.
+
+permalink: /blog/:title/
+
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title/
+
 timezone: America/New_York
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      nav_section: blog
 
 # Files that should not be copied into the generated site.
 exclude:
@@ -12,3 +23,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+

@@ -1,36 +1,31 @@
+---
+layout: default
+title: Home
+permalink: /
+nav_section: home
+---
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta name="description" content="Riftline Games creates bold, player-first interactive worlds.">
-        <title>Riftline Games | Independent Game Studio</title>
-        <link rel="stylesheet" href="styles.css">
+        <meta name="description" content="Feedback Games creates bold, player-first interactive worlds.">
+        <title>Feedback Games | Independent Game Studio</title>
+        <link 
+            rel="stylesheet" 
+            href="{{ '/styles.css' | relative_url }}"
+        >
     </head>
     <body>
         <a class="skip-link" href="#main">Skip to content</a>
-        <header class="site-header">
-            <div class="nav-wrap">
-                <a class="logo" href="index.html">Riftline<span>//</span>Games</a>
-                <button class="menu-toggle" aria-expanded="false" aria-label="Open navigation">☰</button>
-                <nav class="site-nav" aria-label="Main navigation">
-                    <ul>
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="projects.html" >Projects</a></li>
-                        <li><a href="about.html" >About</a></li>
-                        <li><a href="blog.html" >Blog</a></li>
-                        <li><a href="contact.html" >Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        {% include header.html %}
         <main id="main">
             <section class="hero">
                 <div class="hero-content reveal">
                     <div class="eyebrow">Independent game studio // Florida</div>
                     <h1>Break the line.<br>Build the impossible.</h1>
                     <p class="hero-copy">We make high-impact games with sharp identities, tactile systems, and worlds that stay with you after the credits.</p>
-                    <div class="actions"><a class="button" href="projects.html">Explore our games</a><a class="button ghost" href="about.html">Meet the studio</a></div>
+                    <div class="actions"><a class="button" href="{{ '/projects/' | relative_url }}">Explore our games</a><a class="button ghost" href="{{ '/about/' | relative_url }}">Meet the studio</a></div>
                 </div>
             </section>
             <section class="section">
@@ -44,33 +39,33 @@
                     </div>
                     <div class="projects-grid">
                         <article class="project-card reveal">
-                            <img src="assets/images/project-1.svg" alt="Abstract placeholder artwork for Project Helix">
+                            <img src="{{ '/assets/images/project-1.svg' | relative_url }}" alt="Abstract placeholder artwork for Project Helix">
                             <div class="project-overlay">
                                 <span class="project-tag">In development · Action</span>
                                 <h3>Project Helix</h3>
                                 <p>A kinetic third-person action game built around momentum and controlled chaos.</p>
                             </div>
-                            <a class="project-link" href="project-detail.html" aria-label="View Project Helix"></a>
+                            <a class="project-link" href="{{ '/projects/project-helix' | relative_url }}" aria-label="View Project Helix"></a>
                         </article>
                         <article class="project-card reveal">
-                            <img src="assets/images/project-2.svg" alt="Abstract placeholder artwork for Dead Signal">
+                            <img src="{{ '/assets/images/project-2.svg' | relative_url }}" alt="Abstract placeholder artwork for Dead Signal">
                             <div class="project-overlay">
                                 <span class="project-tag">Prototype · Horror</span>
                                 <h3>Dead Signal</h3>
                                 <p>Follow a transmission into a structure that should not exist.</p>
                             </div>
-                            <a class="project-link" href="project-detail.html" aria-label="View Dead Signal"></a>
+                            <a class="project-link" href="{{ '/projects/project-helix' | relative_url }}" aria-label="View Dead Signal"></a>
                         </article>
                     </div>
-                    <div class="actions"><a class="button ghost" href="projects.html">View all projects</a></div>
+                    <div class="actions"><a class="button ghost" href="{{ '/projects/' | relative_url }}">View all projects</a></div>
                 </div>
             </section>
             <section class="section statement">
                 <div class="shell">
                     <h2 class="reveal">We don’t chase trends.<br>We chase impact.</h2>
                     <div class="reveal">
-                        <p>Riftline is a small production company focused on distinct mechanics, readable design, and strong artistic direction.</p>
-                        <a class="button ghost" href="about.html">Our approach</a>
+                        <p>Feedback is a small production company focused on distinct mechanics, readable design, and strong artistic direction.</p>
+                        <a class="button ghost" href="{{ '/about/' | relative_url }}">Our approach</a>
                     </div>
                 </div>
             </section>
@@ -81,7 +76,7 @@
                             <div class="eyebrow">Development log</div>
                             <h2>From inside the <span class="slash">build.</span></h2>
                         </div>
-                        <a href="blog.html">Read all posts →</a>
+                        <a href="{{ '/blog/' | relative_url }}">Read all posts →</a>
                     </div>
                     <div class="posts-grid">
                         <article class="post-card reveal">
@@ -103,18 +98,7 @@
                 </div>
             </section>
         </main>
-        <footer class="site-footer">
-            <div class="shell footer-grid">
-                <div>
-                    <a class="logo" href="index.html">Riftline<span>//</span>Games</a>
-                    <p>Independent games. Uncompromising worlds.</p>
-                </div>
-                <div>
-                    <div class="socials"><a href="#">YouTube</a><a href="#">Discord</a><a href="#">Bluesky</a><a href="#">Steam</a></div>
-                    <p>© 2026 Riftline Games. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
-        <script src="script.js"></script>
+        {% include footer.html %}
+        <script src="{{ '/script.js' | relative_url }}"></script>
     </body>
 </html>

@@ -1,28 +1,23 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+nav_section: projects
+---
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Projects | Riftline Games</title>
-        <link rel="stylesheet" href="styles.css">
+        <title>Projects | Feedback Games</title>
+        <link 
+            rel="stylesheet" 
+            href="{{ '/styles.css' | relative_url }}"
+        >
     </head>
     <body>
         <a class="skip-link" href="#main">Skip to content</a>
-        <header class="site-header">
-            <div class="nav-wrap">
-                <a class="logo" href="index.html">Riftline<span>//</span>Games</a>
-                <button class="menu-toggle" aria-expanded="false" aria-label="Open navigation">☰</button>
-                <nav class="site-nav" aria-label="Main navigation">
-                    <ul>
-                        <li><a href="index.html" >Home</a></li>
-                        <li><a href="projects.html" class="active">Projects</a></li>
-                        <li><a href="about.html" >About</a></li>
-                        <li><a href="blog.html" >Blog</a></li>
-                        <li><a href="contact.html" >Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        {% include header.html %}
         <main id="main">
             <section class="page-hero">
                 <div class="shell">
@@ -36,57 +31,46 @@
                     <div class="filter-row" aria-label="Project filters"><button class="filter-button active" data-filter="all">All</button><button class="filter-button" data-filter="current">Current</button><button class="filter-button" data-filter="prototype">Prototypes</button><button class="filter-button" data-filter="released">Released</button></div>
                     <div class="projects-grid">
                         <article class="project-card reveal" data-category="current">
-                            <img src="assets/images/project-1.svg" alt="Project Helix placeholder">
+                            <img src="{{ '/assets/images/project-1.svg' | relative_url }}" alt="Project Helix placeholder">
                             <div class="project-overlay">
                                 <span class="project-tag">Current · Action</span>
                                 <h3>Project Helix</h3>
                                 <p>Momentum-driven combat in a fractured megastructure.</p>
                             </div>
-                            <a class="project-link" href="project-detail.html" aria-label="View Project Helix"></a>
+                            <a class="project-link" href="{{ '/projects/project-helix' | relative_url }}" aria-label="View Project Helix"></a>
                         </article>
                         <article class="project-card reveal" data-category="prototype">
-                            <img src="assets/images/project-2.svg" alt="Dead Signal placeholder">
+                            <img src="{{ '/assets/images/project-2.svg' | relative_url }}" alt="Dead Signal placeholder">
                             <div class="project-overlay">
                                 <span class="project-tag">Prototype · Horror</span>
                                 <h3>Dead Signal</h3>
                                 <p>Analog dread, environmental puzzles, and one impossible broadcast.</p>
                             </div>
-                            <a class="project-link" href="project-detail.html" aria-label="View Dead Signal"></a>
+                            <a class="project-link" href="{{ '/projects/project-helix' | relative_url }}" aria-label="View Dead Signal"></a>
                         </article>
                         <article class="project-card reveal" data-category="released">
-                            <img src="assets/images/project-3.svg" alt="Zero Hour placeholder">
+                            <img src="{{ '/assets/images/project-3.svg' | relative_url }}" alt="Zero Hour placeholder">
                             <div class="project-overlay">
                                 <span class="project-tag">Released · Arcade</span>
                                 <h3>Zero Hour</h3>
                                 <p>A compact score-attack experiment about precision under pressure.</p>
                             </div>
-                            <a class="project-link" href="project-detail.html" aria-label="View Zero Hour"></a>
+                            <a class="project-link" href="{{ '/projects/project-helix' | relative_url }}" aria-label="View Zero Hour"></a>
                         </article>
                         <article class="project-card reveal" data-category="prototype">
-                            <img src="assets/images/project-4.svg" alt="Blacksite placeholder">
+                            <img src="{{ '/assets/images/project-4.svg' | relative_url }}" alt="Blacksite placeholder">
                             <div class="project-overlay">
                                 <span class="project-tag">Prototype · Strategy</span>
                                 <h3>Blacksite</h3>
                                 <p>Plan the breach. Read the room. Adapt when the plan collapses.</p>
                             </div>
-                            <a class="project-link" href="project-detail.html" aria-label="View Blacksite"></a>
+                            <a class="project-link" href="{{ '/projects/project-helix' | relative_url }}" aria-label="View Blacksite"></a>
                         </article>
                     </div>
                 </div>
             </section>
         </main>
-        <footer class="site-footer">
-            <div class="shell footer-grid">
-                <div>
-                    <a class="logo" href="index.html">Riftline<span>//</span>Games</a>
-                    <p>Independent games. Uncompromising worlds.</p>
-                </div>
-                <div>
-                    <div class="socials"><a href="#">YouTube</a><a href="#">Discord</a><a href="#">Bluesky</a><a href="#">Steam</a></div>
-                    <p>© 2026 Riftline Games. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
-        <script src="script.js"></script>
+        {% include footer.html %}
+        <script src="{{ '/script.js' | relative_url }}"></script>
     </body>
 </html>

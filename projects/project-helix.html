@@ -1,28 +1,22 @@
+---
+title: Project Helix
+permalink: /projects/project-helix
+nav_section: projects
+---
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Project Helix | Riftline Games</title>
-        <link rel="stylesheet" href="styles.css">
+        <title>Project Helix | Feedback Games</title>
+        <link 
+            rel="stylesheet" 
+            href="{{ '/styles.css' | relative_url }}"
+        >
     </head>
     <body>
         <a class="skip-link" href="#main">Skip to content</a>
-        <header class="site-header">
-            <div class="nav-wrap">
-                <a class="logo" href="index.html">Riftline<span>//</span>Games</a>
-                <button class="menu-toggle" aria-expanded="false" aria-label="Open navigation">☰</button>
-                <nav class="site-nav" aria-label="Main navigation">
-                    <ul>
-                        <li><a href="index.html" >Home</a></li>
-                        <li><a href="projects.html" class="active">Projects</a></li>
-                        <li><a href="about.html" >About</a></li>
-                        <li><a href="blog.html" >Blog</a></li>
-                        <li><a href="contact.html" >Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        {% include header.html %}
         <main id="main">
             <section class="page-hero">
                 <div class="shell">
@@ -34,7 +28,7 @@
             </section>
             <section class="section">
                 <div class="shell">
-                    <img class="angle-image" src="assets/images/project-1.svg" alt="Project Helix placeholder key art">
+                    <img class="angle-image" src="{{ '/assets/images/project-1.svg' | relative_url }}" alt="Project Helix placeholder key art">
                     <div class="split" style="margin-top:4rem;align-items:start">
                         <div>
                             <div class="eyebrow">The game</div>
@@ -48,18 +42,7 @@
                 </div>
             </section>
         </main>
-        <footer class="site-footer">
-            <div class="shell footer-grid">
-                <div>
-                    <a class="logo" href="index.html">Riftline<span>//</span>Games</a>
-                    <p>Independent games. Uncompromising worlds.</p>
-                </div>
-                <div>
-                    <div class="socials"><a href="#">YouTube</a><a href="#">Discord</a><a href="#">Bluesky</a><a href="#">Steam</a></div>
-                    <p>© 2026 Riftline Games. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
-        <script src="script.js"></script>
+        {% include footer.html %}
+        <script src="{{ '/script.js' | relative_url }}"></script>
     </body>
 </html>

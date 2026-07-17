@@ -1,28 +1,23 @@
+---
+layout: default
+title: Contact
+permalink: /contact/
+nav_section: contact
+---
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Contact | Riftline Games</title>
-        <link rel="stylesheet" href="styles.css">
+        <title>Contact | Feedback Games</title>
+        <link 
+            rel="stylesheet" 
+            href="{{ '/styles.css' | relative_url }}"
+        >
     </head>
     <body>
         <a class="skip-link" href="#main">Skip to content</a>
-        <header class="site-header">
-            <div class="nav-wrap">
-                <a class="logo" href="index.html">Riftline<span>//</span>Games</a>
-                <button class="menu-toggle" aria-expanded="false" aria-label="Open navigation">☰</button>
-                <nav class="site-nav" aria-label="Main navigation">
-                    <ul>
-                        <li><a href="index.html" >Home</a></li>
-                        <li><a href="projects.html" >Projects</a></li>
-                        <li><a href="about.html" >About</a></li>
-                        <li><a href="blog.html" >Blog</a></li>
-                        <li><a href="contact.html" class="active">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        {% include header.html %}
         <main id="main">
             <section class="page-hero">
                 <div class="shell">
@@ -37,8 +32,8 @@
                         <h2>Start a conversation.</h2>
                         <p style="color:var(--muted)">Replace the placeholder information below with your real studio address and channels.</p>
                         <ul class="contact-list">
-                            <li><strong>General</strong>hello@riftlinegames.com</li>
-                            <li><strong>Press</strong>press@riftlinegames.com</li>
+                            <li><strong>General</strong>hello@Feedbackgames.com</li>
+                            <li><strong>Press</strong>press@Feedbackgames.com</li>
                             <li><strong>Location</strong>Southwest Florida, USA</li>
                         </ul>
                     </div>
@@ -53,18 +48,7 @@
                 </div>
             </section>
         </main>
-        <footer class="site-footer">
-            <div class="shell footer-grid">
-                <div>
-                    <a class="logo" href="index.html">Riftline<span>//</span>Games</a>
-                    <p>Independent games. Uncompromising worlds.</p>
-                </div>
-                <div>
-                    <div class="socials"><a href="#">YouTube</a><a href="#">Discord</a><a href="#">Bluesky</a><a href="#">Steam</a></div>
-                    <p>© 2026 Riftline Games. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
-        <script src="script.js"></script>
+        {% include footer.html %}
+        <script src="{{ '/script.js' | relative_url }}"></script>
     </body>
 </html>

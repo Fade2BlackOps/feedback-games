@@ -1,28 +1,23 @@
+---
+layout: default
+title: About
+permalink: /about/
+nav_section: about
+---
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>About | Riftline Games</title>
-        <link rel="stylesheet" href="styles.css">
+        <title>About | Feedback Games</title>
+        <link 
+            rel="stylesheet" 
+            href="{{ '/styles.css' | relative_url }}"
+        >
     </head>
     <body>
         <a class="skip-link" href="#main">Skip to content</a>
-        <header class="site-header">
-            <div class="nav-wrap">
-                <a class="logo" href="index.html">Riftline<span>//</span>Games</a>
-                <button class="menu-toggle" aria-expanded="false" aria-label="Open navigation">☰</button>
-                <nav class="site-nav" aria-label="Main navigation">
-                    <ul>
-                        <li><a href="index.html" >Home</a></li>
-                        <li><a href="projects.html" >Projects</a></li>
-                        <li><a href="about.html" class="active">About</a></li>
-                        <li><a href="blog.html" >Blog</a></li>
-                        <li><a href="contact.html" >Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        {% include header.html %}
         <main id="main">
             <section class="page-hero">
                 <div class="shell">
@@ -33,11 +28,11 @@
             </section>
             <section class="section">
                 <div class="shell split">
-                    <img class="angle-image reveal" src="assets/images/studio.svg" alt="Placeholder for a studio team photograph">
+                    <img class="angle-image reveal" src="{{ '/assets/images/studio.svg' | relative_url }}" alt="Placeholder for a studio team photograph">
                     <div class="prose reveal">
                         <div class="eyebrow">Who we are</div>
                         <h2>Built to make bold work.</h2>
-                        <p>Riftline Games is a placeholder studio identity you can rename throughout these files. This page gives you space for your origin story, location, team background, and creative mission.</p>
+                        <p>Feedback Games is a placeholder studio identity you can rename throughout these files. This page gives you space for your origin story, location, team background, and creative mission.</p>
                         <p>Our goal is simple: combine expressive game feel with clear systems and memorable worlds. We favor focused scope, rapid iteration, and honest playtesting over feature bloat.</p>
                         <div class="stats-grid">
                             <div class="stat"><strong>01</strong><span>Player first</span></div>
@@ -75,18 +70,7 @@
                 </div>
             </section>
         </main>
-        <footer class="site-footer">
-            <div class="shell footer-grid">
-                <div>
-                    <a class="logo" href="index.html">Riftline<span>//</span>Games</a>
-                    <p>Independent games. Uncompromising worlds.</p>
-                </div>
-                <div>
-                    <div class="socials"><a href="#">YouTube</a><a href="#">Discord</a><a href="#">Bluesky</a><a href="#">Steam</a></div>
-                    <p>© 2026 Riftline Games. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
-        <script src="script.js"></script>
+        {% include footer.html %}
+        <script src="{{ '/script.js' | relative_url }}"></script>
     </body>
 </html>
