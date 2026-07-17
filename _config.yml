@@ -1,6 +1,6 @@
 title: Feedback Games
 description: Independent games. Uncompromising worlds.
-url: "https://feedbackgames.com" # the base hostname & protocol for your site
+url: "https://feedbackgames.com" # the base hostname & protocol for the site
 baseurl: "" # Use "/repository-name" for a GitHub project site; leave blank for a custom domain or username.github.io repo.
 
 permalink: /blog/:title/

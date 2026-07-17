@@ -35,39 +35,39 @@ nav_section: blog
                             <article class="blog-card">
 
                                 {% if post.image %}
-                                <img
-                                    src="{{ post.image | relative_url }}"
-                                    alt="{{ post.image_alt | default: post.title | escape }}"
-                                >
+                                    <img
+                                        src="{{ post.image | relative_url }}"
+                                        alt="{{ post.image_alt | default: post.title | escape }}"
+                                    >
                                 {% endif %}
 
                                 <div class="blog-card-content">
 
-                                <div class="eyebrow">
-                                    {{ post.date | date: "%B %-d, %Y" }}
-                                </div>
+                                    <div class="eyebrow">
+                                        {{ post.date | date: "%B %-d, %Y" }}
+                                    </div>
 
-                                <h2>
-                                    <a href="{{ post.url | relative_url }}">
-                                    {{ post.title }}
+                                    <h2>
+                                        <a href="{{ post.url | relative_url }}">
+                                            {{ post.title }}
+                                        </a>
+                                    </h2>
+
+                                    {% if post.description %}
+                                        <p>{{ post.description }}</p>
+                                    {% else %}
+                                        <p>
+                                            {{ post.excerpt | strip_html | truncatewords: 28 }}
+                                        </p>
+                                    {% endif %}
+
+                                    <a
+                                        class="text-link"
+                                        href="{{ post.url | relative_url }}"
+                                    >
+                                        Read article →
                                     </a>
-                                </h2>
-
-                                {% if post.description %}
-                                    <p>{{ post.description }}</p>
-                                {% else %}
-                                    <p>
-                                    {{ post.excerpt | strip_html | truncatewords: 28 }}
-                                    </p>
-                                {% endif %}
-
-                                <a
-                                    class="text-link"
-                                    href="{{ post.url | relative_url }}"
-                                >
-                                    Read article →
-                                </a>
-
+                                    
                                 </div>
 
                             </article>
