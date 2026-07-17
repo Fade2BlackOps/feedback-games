@@ -1,4 +1,4 @@
-# Riftline Games Website Starter
+# Feedback Games Website Starter
 
 A static multi-page studio website built with plain HTML, CSS, and JavaScript.
 
@@ -6,7 +6,7 @@ A static multi-page studio website built with plain HTML, CSS, and JavaScript.
 Double-click `index.html`, or use VS Code's Live Server extension.
 
 ## Rename the studio
-Search all files for `Riftline Games`, `Riftline//Games`, and `riftlinegames.com`.
+Search all files for `Feedback Games`, `Feedback//Games`, and `feedbackgames.net`.
 
 ## Replace images
 Replace the SVG files in `assets/images/` while keeping the same filenames, or update the paths in the HTML/CSS.

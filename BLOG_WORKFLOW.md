@@ -1,4 +1,4 @@
-# Riftline Games Markdown Blog Workflow
+# Feedback Games Markdown Blog Workflow
 
 The site uses **Jekyll**, the static-site generator supported directly by GitHub Pages. Your regular pages remain HTML. Only blog posts need to be Markdown.
 
@@ -58,7 +58,7 @@ In the GitHub repository, open **Settings → Pages** and choose:
 
 GitHub Pages will run Jekyll whenever you push changes.
 
-If the repository is named `your-name.github.io` or uses a custom domain, leave `baseurl` blank in `_config.yml`. If it is a project repository such as `riftline-games`, set `baseurl: "/riftline-games"`.
+If the repository is named `your-name.github.io` or uses a custom domain, leave `baseurl` blank in `_config.yml`. If it is a project repository such as `feedback-games`, set `baseurl: "/feedback-games"`.
 
 ## Categories
 
